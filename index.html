@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미적미적반을 소개합니다</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1d1d1f;
+            --secondary-text: #86868b;
+            --accent-color: #0071e3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Full Height Sections */
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: radial-gradient(circle at center, #ffffff 0%, #f5f5f7 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 8vw, 72px); /* 반응형 폰트 크기 */
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: clamp(18px, 3vw, 26px);
+            color: var(--secondary-text);
+            font-weight: 400;
+        }
+
+        /* Content Blocks */
+        .content-block {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .label {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 19px;
+            margin-bottom: 20px;
+            display: block;
+            letter-spacing: 0.02em;
+        }
+
+        .headline {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 700;
+            margin-bottom: 35px;
+            line-height: 1.05;
+            letter-spacing: -0.01em;
+        }
+
+        .description {
+            font-size: 21px;
+            color: var(--secondary-text);
+            margin-bottom: 40px;
+            word-break: keep-all;
+        }
+
+        /* Dark Section for Contrast */
+        .dark-section {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: #1d1d1f;
+            padding: 50px 40px;
+            border-radius: 28px;
+            text-align: left;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: #2c2c2e;
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            display: inline-block;
+            padding: 18px 36px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #0077ed;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 20px;
+            background: #f5f5f7;
+            font-size: 14px;
+            color: var(--secondary-text);
+            text-align: center;
+        }
+
+        /* Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 60px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="content-block">
+            <span class="label">유신고 명문 동아리</span>
+            <h1>미적미적</h1>
+            <p>지금부터 미적미적반을 소개하겠습니다.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="content-block reveal">
+            <span class="label">활동주제</span>
+            <h2 class="headline">우리는 미적분을 깊이 탐구합니다</h2>
+            <p class="description">3-4명에서 팀을 이루어 AP Calculus(AP 미적분학) 교재의<br>특정 단원을 담당해 부원들에게 강의합니다.<br>물론 1학년들도 충분히 이해할 수 있으니 걱정마세요ㅎㅎ</p>
+        </div>
+    </section>
+
+    <section class="dark-section">
+        <div class="content-block reveal">
+            <span class="label">그 외의 활동들</span>
+            <h2 class="headline">교재뿐 아니라 다양한 탐구활동도 진행합니다.</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3 style="font-size: 24px; margin-bottom: 15px;">수학 토론</h3>
+                    <p style="color: #86868b;">"수학적으로 아름다움을 정의한다면?", 
+                        "핵폭발 시 시간별 버섯구름의 형태는 어떻게 변할까?" 등 정답이 없는 문제에 대해 의견을 나눕니다.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 style="font-size: 24px; margin-bottom: 15px;">수향제(동아리 축제)</h3>
+                    <p style="color: #86868b;">미분을 아날로그적으로 구현하기, 골프공 궤적을 계산하여 들어갈지 여부 판단하기 등 이론 뿐 아니라 실생활에서도 수학을 적극적으로 활용해봅니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="content-block reveal">
+            <h2 class="headline">저희는 여러분들의 지원을 기다립니다</h2>
+            <p class="description">그 어떤 동아리에서도 하지못할 경험을 겪게 될 겁니다</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScBgYq_bOQA0tFP-5srWS4aWWkYVKMxC44mkVlgs1MzmT9UcA/viewform?usp=sharing&ouid=113631832888452900451" class="cta-button">지원하기</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mathematics Club. Designed with Pure Logic.</p>
+    </footer>
+
+    <script>
+        // 간단한 스크롤 애니메이션 효과
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // 초기 실행
+    </script>
+
+</body>
+</html>
